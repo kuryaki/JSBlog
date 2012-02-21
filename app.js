@@ -36,7 +36,11 @@ var articleProvider = new ArticleProvider();
 
 app.get('/', function(req, res){
     articleProvider.findAll(function(error, docs){
-        res.send(docs);
+        res.render('index.jade', { locals: {
+            title: 'Kuryaki\'s Blog',
+            articles:docs
+            }
+        });
     });
 });
 
