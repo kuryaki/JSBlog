@@ -44,5 +44,22 @@ app.get('/', function(req, res){
     });
 });
 
+app.get('/new', function(req, res){
+    res.render('blog_new.jade', {locals: {
+        title: 'New Post'
+    }
+    });
+});
+
+app.post('/new', function(req, res){
+    articleProvider.save({
+        title: req.param('title'),
+        body: req.param('body')
+        },
+        function error(error, docs){
+            res.redirect('/');
+    });
+});
+
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
