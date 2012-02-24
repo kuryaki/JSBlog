@@ -64,6 +64,7 @@ app.post('/new', function(req, res){
 });
 
 app.get('/:id', function(req, res){
+    console.log("MyId: "+req.params.id);
     articleProvider.findById(req.params.id, function (error, article){
         res.render('blog_show.jade', {
             locals: {
