@@ -6,7 +6,9 @@
 var express = require('express')
   , routes = require('./routes');
 
-var articleProvider = require('./articleprovider-memory').ArticleProvider;
+//This was the memory based persistence
+//var articleProvider = require('./articleprovider-memory').ArticleProvider;
+var articleProvider = require('./articleprovider-mongodb').ArticleProvider;
 
 var app = module.exports = express.createServer();
 
@@ -30,7 +32,7 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-var articleProvider = new ArticleProvider();
+var articleProvider = new ArticleProvider('localhost', 27017);
 
 // Routes
 
