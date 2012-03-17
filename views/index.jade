@@ -16,10 +16,15 @@
         li
           a(href="mailto:david@roncancio.me")="contact"
 
-  #articles
-    - each article in articles
-      div.article
-        div.created_at= article.created_at
-        div.title 
+  blogger
+    .content
+      .info
+      - each article in articles
+        .article
+          .created_at= article.created_at.toDateString()
+          .title 
             a(href="/blog/"+article._id.toHexString())!= article.title
-        div.body= article.body
+          .body= article.body
+  
+
+  .footer

@@ -60,31 +60,47 @@ b, strong
 .tabs li
   display inline
   margin 0 0 0 5px
-h1, h2
-  margin 0
-  font-size 22px
-  color #343434
-h1
-  text-shadow 1px 2px 2px #ddd
-  font-size 60px
-#articles
-  text-align left
-  margin-left auto
-  margin-right auto
-  width 320px
-  .article
-    margin 20px
-    .created_at
-        display none
-    .title
-        font-weight bold
-        text-decoration underline
-        background-color #eee
-    .body
-        background-color #ffa
+.content
+  margin 0 0 30px
+  overflow auto
+.info
+  float left
+  width 180px
 .article
+  float right
+  width 500px
   .created_at
-    display none
+    font-size 9px
+    color #222
+    text-align right
+    text-transform uppercase
+    -moz-opacity 0.5
+    -webkit-opacity 0.5
+  .created_at:hover
+    cursor:default
+    -webkit-transition opacity .2s
+    -moz-opacity 1
+    -webkit-opacity 1
+  .title
+    font normal 13px 'Calibri', Trebuchet MS, sans-serif
+    color #666
+    letter-spacing 3px
+    margin 0 0 15px
+    padding 5px 0
+    text-align center
+    text-transform uppercase
+  .title a
+    background #f9f9f9
+    border-bottom 1px solid #f3f3f3
+    padding 5px 10px 4px
+    color #666
+  .title a:hover
+    background #f7f7f7
+    color #444
+    border-bottom 1px solid #f0f0f0
+.article img
+  max-width 500px
+.article
   input[type =text]
     width 490px
     margin-left 16px
