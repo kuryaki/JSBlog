@@ -7,9 +7,16 @@
     .ldquo &ldquo;
     .quote I don’t believe in originality. You take inspiration from whatever moves you and you find your voice in those things.
     div(align="right")  &mdash; Tim Walker
+    .navigator
+      ul.tabs
+        li
+          a(href="/#about")="about me"
+        li
+          a(href="/#links")="links"
+        li
+          a(href="mailto:david@roncancio.me")="contact"
 
-h1= title
-#articles
+  #articles
     - each article in articles
       div.article
         div.created_at= article.created_at
